@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.container{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display:flex;
+  height:200vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding:10px;
+  background: linear-gradient(135deg,#71b7e6,#9b69b6) ;
+
+
+}
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  width:100%;
+  padding: 25px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-content: center;
+  background:#fff;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position:relative;
+  margin-bottom:10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container .title::before{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:3px;
+  width:30px;
+  background: linear-gradient(135deg,#71b7e6,#9b69b6) ;
+
 }
+
+.form-container .userdetails{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  margin:20px 0 12px 0;
+
+}
+
+.form-container .inputbox{
+  width:calc(100% /2 - 20px);
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight:450;
+
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="date"],
+.form-container input[type="number"],
+.form-container select,
+.form-container input[type="textarea"]
+
+ {
+  width: 100%;
+  height:45px;
+  padding-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline:none;
+  margin-bottom: 15px;
+  font-size:16px;
+  border-bottom-width: 2px;
+  transition:all 0 3s ease;
+  
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus
+{
+
+  border-color:#9b69b6 ;
+
+}
+
+.form-container .medicalHistoryTitle{
+  font-size:20px;
+  font-weight:550;
+
+}
+
+.form-container .medicalHistoryDetails .category1,
+.form-container .medicalHistoryDetails .category2,
+.form-container .medicalHistoryDetails .category3,
+.form-container .medicalHistoryDetails .category4,
+.form-container .medicalHistoryDetails .category5,
+.form-container .medicalHistoryDetails .category6
+
+{
+  display:flex;
+  flex-wrap: wrap;
+  width:90%;
+  margin:18px 0;
+  justify-content:space-between;
+}
+
+.form-container input[type="checkbox"] {
+  
+  width: 20px;
+  height: 20px;
+  
+}
+
+.form-container button {
+  
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  height:45px;
+  margin:45px 0; 
+  background:linear-gradient(135deg,#71b7e6,#9b69b6) ;
+  color: #fff;
+  height:100%;
+  width:100%;
+  outline:none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+ 
+
+}
+
+.form-container button:hover {
+  background:linear-gradient(-135deg,#71b7e6,#9b69b6) ;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+@media(max-width:584px)
+{
+  .form-container {
+    max-width: 700px;}
+
+    .form-container .inputbox{
+      width:100%;
+    }
+
+    .form-container .userdetails{
+       max-height: 400px;
+       overflow-y: scroll;}
+    
+
+
+}
+
